@@ -5,7 +5,7 @@
 Domain yang dipilih dalam proyek machine learning ini adalah Investment & financial, dengan judul **Predictive Analytics of Tesla stock**
 
 ### Latar Belakang 
-Pada masa sekarang dari kalangan yang tua maupun yang muda sudah tak asing lagi dengan investasi, Entah investasi properti, Saham, Stock, maupun Crypto. Orang atau investor yang sudah memulai perjalanan invest nya sejak dini kebanyakan mereka mempunyai trading plan atau palnning keuangan mereka untuk kedepannya.
+Pada masa sekarang dari kalangan yang tua maupun yang muda sudah tak asing lagi dengan investasi, Entah investasi properti, Saham, Stock, maupun Crypto. Orang atau investor yang sudah memulai perjalanan invest nya sejak dini kebanyakan mereka mempunyai trading plan atau planning keuangan mereka untuk kedepannya.
 
 Orang yang berinvestasi pada sejak dini itu merupakan salah satu orang yang sudah peduli tentang masa depanya entah itu investasi dalam banyak hal properti ataupun saham misalnya, beberapa tahun belakangan ini kususnya saham teknologi company, hampir bisa menjamin hari tua seseorang jika dia berinvestasi pada company yang tepat, contohnya **Tesla** kemarin yang melonjak naik ratusan persen dikarenakan teknologi yang ia munculkan terlebih lagi **Twitter** sudah diakuisisi menjadi pemilik penuh dari seorang **Elon Musk** sekaligus pemilik Tesla. Oleh karena itu proyek ini akan mempermudah para investor muda untuk berinvestasi lebih pintar pada company yang tidak akan merugikan dalam rentan waktu beberapa tahun kedepan menggunakan Machine Learning untuk memprediksi kemungkinan naik turunnya harga di pasar kedepannya.
 
@@ -32,6 +32,7 @@ Solusi yang bisa dilakukan agar goals dapat terpenuhi sebagai berikut :
   - Melakukan Normalization pada dataset terutama pada fitur numerik.
   - Membuat model regresi guna meprediksi bilangan kontinu harga saham dimasa yang akan datang.
   - Menangani jika terjadinya missing value pada data.
+  - Jika terdapat outliner, menganganinya dengan metode IQR.
 
 * Berikut merupakan list algortima yang dicoba dalam model:
   - Support Vector Machine (Support Vector Regression)
@@ -59,7 +60,7 @@ sebelum beranjak ke Data Preparation, kita harus mengetahui data, seperti korela
 
 Gambar 1.Outliner Dataset
 
-Pada gambar 1, Jika data numerik divisualisasikan, hanya fitur ***Volume*** saja yang memiliki banyak outlier. Untuk menangani outlier dengan menggunakan IQR Method yaitu dengan menghapus data yang berada diluar IQR yaitu antara **25%** dan **75%**. setela selesai kita akan mendapatkan total sampel data yang sudah clean terhadap outliner sebanyak **3861** data dan **7** kolom.
+Terlihat jika di atas banyak terdapat outlier pada setiap variabel, lalu untuk mengatasinya nantinya penulis akan menerapkan batas bawah dan batas atas menggunakan metode IQR
 
 - Unvariate Analysis
 
@@ -68,7 +69,7 @@ Pada gambar 1, Jika data numerik divisualisasikan, hanya fitur ***Volume*** saja
 
 Gambar 2.Unvariate Analysis
 
-Pada Gambar 2, Karena yang kita cari adalah Adj Close, maka kita akan fokus ke salah satu kolom dimana kolomnya adalah kolom Adj Close
+Pada Gambar 2, Karena yang kita cari adalah Adj Close, maka kita akan fokus ke salah satu kolom dimana kolomnya adalah kolom Adj Close dan Terlihat pada grafik bahwa semua data cenderung distribusi nilainya miring ke kanan (right-skewed). Hal ini akan berimplikasi pada model nantinya.
 
 - Multivariate Analysis
 
