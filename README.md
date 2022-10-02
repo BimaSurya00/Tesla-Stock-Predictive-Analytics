@@ -1,4 +1,4 @@
-# Laporan Proyek Machine Learning - Muhamad Gatot Supiadin
+# Laporan Proyek Machine Learning - Bima Surya Nurwahid
 
 ## Domain Proyek
 
