@@ -55,7 +55,7 @@ Dataset yang digunakan memiliki format .csv, mempunyai total 4431 data dengan 7 
 sebelum beranjak ke Data Preparation, kita harus mengetahui data, seperti korelasi, outliner, dan analisis Univariate dan Multivariate anailisis
 - Mengangani adanya Outliner 
 
-![outliner_before](https://user-images.githubusercontent.com/73319544/191768099-69c950a6-6e10-43fb-b13e-33ee38293c0d.png)
+![outliner_before]( ![1 tesla](https://user-images.githubusercontent.com/105061172/193448036-ec730c1b-88c7-488d-90bb-f8ff1fbbb64a.jpeg)
 
 Gambar 1.Outliner Dataset
 
