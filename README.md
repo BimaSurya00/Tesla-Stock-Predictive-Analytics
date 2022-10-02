@@ -63,7 +63,8 @@ Pada gambar 1, Jika data numerik divisualisasikan, hanya fitur ***Volume*** saja
 
 - Unvariate Analysis
 
-![unvariative](https://user-images.githubusercontent.com/73319544/191768236-ee017345-dd9f-41a5-abd5-33642f5f9321.png)
+![unvariative](https://user-images.githubusercontent.com/105061172/193448172-937d1d3c-ca01-4172-8e11-69ac6799f2aa.jpeg)
+
 
 Gambar 2.Unvariate Analysis
 
