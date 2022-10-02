@@ -79,7 +79,7 @@ Pada kali ini kita akan menganalisis korealsi Adj Close terhadap fitur lain. dan
 
 Gambar 3.Multivariate Analysis
 
-Pada Gambar 3, Kita bisa lihat dan berfokus pada kolom Adj Close dengan kolom lainya, pada plot diatas kita bisa berfokus pada plot baris **ke-5**. terlihat cukup jelas bahwa kolom Adj Close memiliki korelasi positif terhadap kolom **High, Open, Low, dan Close**. sementara pada kolom **Volume** memiliki korelasi yang lemah. 
+Pada Gambar 3, kolom Adj Close memiliki korelasi positif terhadap kolom **High, Open, Low, dan Close**. Dan kolom **Volume** memiliki korelasi yang lemah. 
 
 Selanjutnya kita bisa membuat heatmap korelasi pada data menggunakan library Seaborn
 
