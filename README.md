@@ -15,35 +15,32 @@ Forecasting merupakan bagian dari Machine Learning dimana itu salah teknik yang 
 
 ### Problem Statements
 Berdasarkan latar belakang yang telah dijelaskan diawal, berikut beberapa permasalahan yang dapat diselesaikan dalam proyek ini :
-- Apakah **GOOGL** stock merupakan wadah yang baik untuk investasi jangka panjang, lalu bagaimana cara menganalisis harga dari stock **GOOGL**? 
-- Bagaimana memilih algortma dan melatih model terbaik untuk data tersebut?
-- Bagaimana cara menganalisis dan memprediksi harga stock GOOGL menggunakan Forecasting dalam Time Series?
+- Apakah Tesla adalah jawaban untuk para investor bahwa Tesla adalah market yang bagus untuk kedepannya?
+- Bagaimana cara membangun model machine learning untuk memprediksi harga stock Tesla kedepanya?
 
 ### Goals
 Tujuan dibuatnya proyek ini sebagai berikut :
-- **GOOGL** menjadi jawaban positif untuk investor muda dalam berinvestasi untuk hari tua, serta harga dapat dianalisis menggunakan model machine learning.
-- Melakukan training model terhadap beberapa algoritma dan memilih yang terbaik.
-- Tentu saja ini berita bagus untuk para investor, mereka dapat berinvestasi ke sebuah company yang tanpa adanya keraguan dalam berinvestasi dimasa yang akan datang.
+- Tesla menjadi jawaban untuk para investor dalam berinvestasi jangka panjang dan harga market dapat dianalisis menggunakan machine learning.
+- Membangun model machine learning untuk memprediksi harga stock Tesla dengan tingkat akurasi yang tinggi.
 
 
 ### Solution statements
 Solusi yang bisa dilakukan agar goals dapat terpenuhi sebagai berikut :
-* Melakukan analisa dan eksplorasi lebih jauh pada dataset dan memvisualisasikanya agar mendapat gambaran yang kuat. berikut merupakan tahapan yang bisa mewakili solution statement
-  - Menangani jika terjadinya missing value pada data.
+* Melakukan analisa dan eksplorasi lebih jauh pada dataset dan memvisualisasikanya agar mendapat gambaran yang kuat, seperti:
+  - Melakukan pembagian dataset
   - Mencari korelasi pada dataset untuk mencari dimana variabel dependent dan variabel  independent. 
-  - Jika terdapat outliner, menganganinya dengan metode IQR.
   - Melakukan Normalization pada dataset terutama pada fitur numerik.
   - Membuat model regresi guna meprediksi bilangan kontinu harga saham dimasa yang akan datang.
+  - Menangani jika terjadinya missing value pada data.
 
 * Berikut merupakan list algortima yang dicoba dalam model:
   - Support Vector Machine (Support Vector Regression)
   - K-Nearest Neighbors (KNN)
   - Boosting Algorithm (Gradient Boosting Regression)
 
-* Seletah semua dilalui kita bisa menambahkan Hyperparameter tuning agar model dapat berjalan dalam performa terbaiknya menggunakan teknik Grid Search.
 
 ## Data Understanding
-Pada proyek ini saya mengambil dataset publik dari Kaggle yang berjudul _Goggle Stock Data_ (https://www.kaggle.com/datasets/varpit94/google-stock-data).
+Pada proyek ini saya mengambil dataset publik dari Kaggle yang berjudul _Tesla Stock Price_ (https://www.kaggle.com/datasets/rpaguirre/tesla-stock-price).
 
 Dataset yang digunakan memiliki format .csv, mempunyai total 4431 data dengan 7 kolom diantaranya (Date, Open, High, Low, Close, Adj Close dan Volume), berikut merupakan penjelasan masing masing kolom:
 - **Date**: Opening rekap data
