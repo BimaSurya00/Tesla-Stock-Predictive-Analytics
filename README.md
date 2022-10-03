@@ -87,7 +87,7 @@ Selanjutnya kita bisa membuat heatmap korelasi pada data menggunakan library Sea
 
 Gambar 4. Korelasi Heatmap
 
-Pada Gambar 4, untuk memperjelas korelasi kita menggunakan heatmap dan kita tahu bahwa kolom Adj Close memiliki korelasi positif yang kuat terhadap setiap fitur yang ditandakan dengan angka **1** yang berarti kuat dan bisa kita gunakan sebagai _Dependent variable_ terkecuali pada fitur **Volume** yang mempunyai korelasi lemah.
+Pada Gambar 4, Terlihat pada matriks korelasi di atas dapat disimpulkan bahwa semua variabel memiliki keterikatan dan korelasi yang kuat antar variabel lainnya
 
 ## Data Preparation
 Pada tahap ini saya melakukan beberapa tahapan dalam pemrosesan data:
