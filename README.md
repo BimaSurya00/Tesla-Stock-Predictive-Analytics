@@ -149,17 +149,16 @@ K-Nearest Neighbors merupakan algoritma machine learning yang bekerja dengan men
 #### Kekurangan 
 - Sensitif pada outlier dan lebih lambat secara signifikan
 
-#### Pemakaian Algortima 
-Untuk proyek kali ini kita akan menggunakan model K-Nearest Neighbors karena memiliki error (0.00001) yang paling sedikit daripada model yang lain. Namun tidak bisa dipungkiri model dari Gradient Boosting juga memiliki error (0.000011) yang hampir seperti KNN.
+Dapat disimpulkan model terbaik yang digunakan untuk dataset ini ialah model KNN di mana KNN memiliki nilai akurasi yang tinggi ketimbang kedua model lainnya.
 
 ## Evaluation
-Pada tahap evaluasi ini metrik yang digunakan adalah Mean Squared Error (MSE), dimana dia akan mengukur seberapa dekat garis pas dengan titik pada data. 
+Pada tahap evaluasi ini metrik yang digunakan adalah Mean Squared Error (MSE), dimana dia akan mengukur seberapa dekat garis pas dengan titik pada data dan mengukur kinerja pada model. Dan ini menunjukkan bahwa KNN merupakan model terbaik dalam memprediksi harga stock Tesla kedepannya.
 
 ![mse_rumus](https://user-images.githubusercontent.com/73319544/191768488-1d350af9-cb15-4fe1-8cd5-7c8ded16aaf9.png)
 
 Gambar 5. Rumus MSE
 
-Pada Gambar 5, Kita bisa melihat perhitungan dari MSE dimana penjelasan dari variablenya sebagai berikut :
+Keterangan :
 - n = Jumlah titik data
 - Yi = nilai sesungguhnya 
 - Yi_hat = nilai prediksi
