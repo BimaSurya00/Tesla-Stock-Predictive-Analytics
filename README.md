@@ -94,17 +94,15 @@ Pada Gambar 4, Terlihat pada matriks korelasi di atas dapat disimpulkan bahwa se
 ## Data Preparation
 Pada tahap ini saya melakukan beberapa tahapan dalam pemrosesan data:
 
-### Melakukan Penanganan Missing Value
-Tahapan awal adalah menghilangkan Missing value pada dataset yang memiliki 2 cara untuk dihapus atau akan diisi dengan nilai rata rata menggunakan library Simpleimputer, karena dataset yang saya gunakan tidak memilki missing value kita bisa lanjut ke tahap selanjutnya
+### Melakukan Penanganan Missing Value dan Outliner
+Tahapan awal adalah menghilangkan Missing value pada dataset yang memiliki 2 cara untuk dihapus atau akan diisi dengan nilai rata rata menggunakan library Simpleimputer, karena dataset yang saya gunakan tidak memilki missing value kita bisa lanjut ke tahap selanjutnya, Dan untuk mengatasi outlier pada proyek, penulis menggunakan penentuan batas atas dan bawah nilai kuartil pada data dengan menggunakan metode IQR.
 
-### Splitting dataset
-Pada tahap ini dataset yang tadi kita sudah diolah kemudian kita bagi menjadi data train dan data test, dengan ratio yang bisa kita atur sendiri, pada proyek ini saya memberikan ratio **80:20**, dimana **80%** merupakan data train dan **20%** merupakan data test yang sudah dibagi menggunakan librari train_test_split dari Sklearn.
+### Splitting atau pembagian dataset
+Untuk mengetahui kinerja model ketika dihadapkan pada data yang belum pernah dilihat sebelumnya, maka perlu dilakukan pembagian dataset. Pada proyek ini dataset dibagi menjadi data latih dan data uji dengan rasio 80% untuk data latih dan 20% untuk data uji. Data latih merupakan data yang akan kita latih untuk membangun model machine learning, sedangkan data uji merupakan data yang belum pernah dilihat oleh model dan digunakan untuk melihat kinerja atau performa dari model yang dilatih. Pembagian dataset dilakukan dengan modul train_test_split dari scikit-learn.
 
 ### Menghapus fitur yang tidak diperlukan 
 setelah diolah ternyata kita hanya memerlukan kolom **Open, High, Low, dan Adj Close**. oleh karena itu kita bisa drop atau menghapus fitur selain kolom diatas seperti **Volume, Date dan Close.**
 
-### Normalization Data
-Pada tahap ini kita ingin agar model bekerja optimal dan maksimal, oleh karena itu kita akan mengtransformasi data dalam rentan angka **0** hingga **1** dengan menggunakan MinMaxScaler.
 
 ## Modeling
 Pada tahap ini kita menggunakan 3 buah algoritma diantaranya ada _Support Vector Regression, Gradient Boost dan KNN_.
@@ -142,18 +140,14 @@ Gradient Boosting adalah algoritma machine learning yang menggunakan teknik ense
 
 ### K-Nearest Neighbors (KNN)
 
-K-Nearest Neighbors merupakan algoritma machine learning yang bekerja dengan mengklasifikasikan data baru menggunakan kemiripan dengan tetangganya atau bisa dikatakan antara data baru dengan sejumlah data (k) pada data yang telah ada. Algoritma ini dapat digunakan untuk klasifikasi dan regresi. Untuk hyperparameter yang digunakan pada model ini hanya 1 yaitu :
-
-- n_neighbors : Parameter yang menunjukanJumlah tetangga untuk yang diperlukan untuk menentukan letak data baru, pada model ini kita gunakan nilai **6** pada hyperparameter n_neighbour karena kita hanya ingin 6 titik yang akan digunakan untuk menentukan letak baru.
+K-Nearest Neighbors merupakan algoritma machine learning yang bekerja dengan mengklasifikasikan data baru atau membandingkan antara sampel dengan sampel yang lain dengan menggunakan kemiripan dengan tetangganya atau bisa dikatakan antara data baru dengan sejumlah data (k) pada data yang telah ada. Algoritma ini dapat digunakan untuk klasifikasi dan regresi guna menghasilkan persamaan yang dihasilkan akan lebih halus. Untuk hyperparameter yang digunakan pada model ini hanya 1 yaitu :
 
 #### kelebihan
-- Dapat menerima data yang masih noisy
 - Sangat efektif apabila jumlah datanya banyak
-- Mudah diimplementasikan
+- Sederhana dan Mudah diimplementasikan
 
 #### Kekurangan 
-- Sensitif pada outlier
-- Rentan pada fitur yang kurang informatif
+- Sensitif pada outlier dan lebih lambat secara signifikan
 
 #### Pemakaian Algortima 
 Untuk proyek kali ini kita akan menggunakan model K-Nearest Neighbors karena memiliki error (0.00001) yang paling sedikit daripada model yang lain. Namun tidak bisa dipungkiri model dari Gradient Boosting juga memiliki error (0.000011) yang hampir seperti KNN.
