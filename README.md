@@ -172,13 +172,15 @@ Gambar 6. Hasil MSE dari model
 
 Pada Gambar 6, Kita bisa lihat hasil dari MSE model, dimana semakin kecil MSE yang diperoleh oleh model maka akan semakin optimal algortima tersebut.
 
-![mse_plot](https://user-images.githubusercontent.com/73319544/191768597-750f3732-6abc-47d9-9f44-1a5e1f03eea8.png)
+![mse_plot](https://user-images.githubusercontent.com/105061172/193509304-9027691a-9b67-441c-8eaa-0bed1a5fb6b4.jpeg)
+
 
 Gambar 7. Plot Visualisasi MSE pada model
 
 Pada Gambar 7, kita bisa melihat hasil plot dari model terhadap beberapa algortma yang digunakan, ada 2 algoritma yang sangat cocok untuk gunakan diantaranya ada KNN dan Gradient Boosting.
 
-![mse_accuracy](https://user-images.githubusercontent.com/105061172/193509145-551bc9a5-236f-4d25-96c8-b05c6ddc73c6.jpeg)
+![mse_accuracy](https://user-images.githubusercontent.com/105061172/193509258-cca133cf-6e96-40cb-b18a-95968d848f4d.jpeg)
+
 
 
 
