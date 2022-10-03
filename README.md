@@ -191,7 +191,8 @@ Pada proyek ini semua model berjalan dengan sangat baik dan maksimal dan hanya t
 ### Forecasting
 pada tahap ini saya akan mencoba memprediksi menggunakan algortma yang kita pili diatas yaitu KNN dalam kurun waktu 30 hari kedepan 
 
-![Prediksi](https://user-images.githubusercontent.com/73319544/191768702-9dc917e8-8ca1-4418-8552-129bba3524f8.png)
+![Prediksi](https://user-images.githubusercontent.com/105061172/193508929-52ddc585-6831-41a5-948d-2db83f5dc051.jpeg)
+
 
 Gambar 9. Prediksi model kurun waktu 30 hari
 
