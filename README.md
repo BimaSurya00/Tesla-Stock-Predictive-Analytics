@@ -165,7 +165,8 @@ Keterangan :
 
 berikut merupakan Visualisai dari hasil akurasi model :
 
-![mse](https://user-images.githubusercontent.com/73319544/191768548-b62df2d8-c282-4dd2-a616-a99d8986b3e5.png)
+![mse](https://user-images.githubusercontent.com/105061172/193508315-d0d6e65f-0bed-474f-9823-4db40229a8ec.jpeg)
+
 
 Gambar 6. Hasil MSE dari model
 
