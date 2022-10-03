@@ -178,7 +178,8 @@ Gambar 7. Plot Visualisasi MSE pada model
 
 Pada Gambar 7, kita bisa melihat hasil plot dari model terhadap beberapa algortma yang digunakan, ada 2 algoritma yang sangat cocok untuk gunakan diantaranya ada KNN dan Gradient Boosting.
 
-![mse_accuracy](https://user-images.githubusercontent.com/105061172/193508511-1f316ddc-6fb1-4da0-9fcc-bdef93402439.jpeg)
+![mse_accuracy](https://user-images.githubusercontent.com/105061172/193508782-5923205f-0fdf-42ad-9630-25c2897cd050.jpeg)
+
 
 
 Gambar 8. Hasil akurasi MSE model
