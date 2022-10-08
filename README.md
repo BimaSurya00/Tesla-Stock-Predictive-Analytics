@@ -5,9 +5,9 @@
 Domain yang dipilih dalam proyek machine learning ini adalah Investment & financial, dengan judul **Predictive Analytics of Tesla stock**
 
 ### Latar Belakang 
-Pada masa sekarang dari kalangan yang tua maupun yang muda sudah tak asing lagi dengan investasi, Entah investasi properti, Saham, Stock, maupun Crypto. Orang atau investor yang sudah memulai perjalanan invest nya sejak dini kebanyakan mereka mempunyai trading plan atau planning keuangan mereka untuk kedepannya.
+Pada masa sekarang dari kalangan yang tua maupun yang muda sudah tak asing lagi dengan investasi, Entah investasi properti, Saham, Stock, maupun Crypto. Orang atau investor yang sudah memulai perjalanan invest nya sejak dini kebanyakan mereka mempunyai trading plan atau persiapan keuangan mereka untuk kedepannya.
 
-Orang yang berinvestasi pada sejak dini itu merupakan salah satu orang yang sudah peduli tentang masa depanya entah itu investasi dalam banyak hal properti ataupun saham misalnya, beberapa tahun belakangan ini kususnya saham teknologi company, hampir bisa menjamin hari tua seseorang jika dia berinvestasi pada company yang tepat, contohnya **Tesla** kemarin yang melonjak naik ratusan persen dikarenakan teknologi yang ia munculkan terlebih lagi **Twitter** sudah diakuisisi menjadi pemilik penuh dari seorang **Elon Musk** sekaligus pemilik Tesla. Oleh karena itu proyek ini akan mempermudah para investor muda untuk berinvestasi lebih pintar pada company yang tidak akan merugikan dalam rentan waktu beberapa tahun kedepan menggunakan Machine Learning untuk memprediksi kemungkinan naik turunnya harga di pasar kedepannya.
+Orang yang berinvestasi pada sejak dini itu merupakan salah satu orang yang sudah peduli tentang masa depanya entah itu investasi dalam banyak hal properti ataupun saham misalnya, beberapa tahun belakangan ini kususnya saham teknologi perusahaan, hampir bisa menjamin hari tua seseorang jika dia berinvestasi pada perusahaan yang tepat, contohnya **Tesla** kemarin yang melonjak naik ratusan persen dikarenakan teknologi yang ia munculkan terlebih lagi **Twitter** sudah diakuisisi menjadi pemilik penuh dari seorang **Elon Musk** sekaligus pemilik Tesla. Oleh karena itu proyek ini akan mempermudah para investor muda untuk berinvestasi lebih pintar pada perusahaan yang tidak akan merugikan dalam rentan waktu beberapa tahun kedepan menggunakan Machine Learning untuk memprediksi kemungkinan naik turunnya harga di pasar kedepannya.
 
 Forecasting merupakan bagian dari Machine Learning dimana itu salah teknik yang dapat meramalkan keadaan, harga dimasa yang akan datang menggunakan data data historynya. hal ini masih termasuk kedalam Time Series forecasting, dengan mendeteksi pola dan kecenderungan data historinya yang kemudian diformulasikan kedalam model machine learnign yang nanti akan kita gunakan untuk meprediksi data yang akan datang beberapa tahun kedepan.
 
@@ -15,12 +15,14 @@ Forecasting merupakan bagian dari Machine Learning dimana itu salah teknik yang 
 
 ### Problem Statements
 Berdasarkan latar belakang yang telah dijelaskan diawal, berikut beberapa permasalahan yang dapat diselesaikan dalam proyek ini :
-- Apakah Tesla adalah jawaban untuk para investor bahwa Tesla adalah market yang bagus untuk kedepannya?
+- Apakah Tesla stock merupakan wadah yang baik dalam berinvestasi jangka panjang, lalu bagaimana cara menganalisis harga dari stock Telsa?
+- Bagaimana memilih algortma terbaik dan melatih model untuk data tersebut?
 - Bagaimana cara membangun model machine learning untuk memprediksi harga stock Tesla kedepanya?
 
 ### Goals
 Tujuan dibuatnya proyek ini sebagai berikut :
 - Tesla menjadi jawaban untuk para investor dalam berinvestasi jangka panjang dan harga market dapat dianalisis menggunakan machine learning.
+- Melakukan training terhadap model dengan 3 algoritma dan memilih satu yang paling optimal.
 - Membangun model machine learning untuk memprediksi harga stock Tesla dengan tingkat akurasi yang tinggi.
 
 
@@ -154,9 +156,11 @@ Dapat disimpulkan model terbaik yang digunakan untuk dataset ini ialah model KNN
 ## Evaluation
 Pada tahap evaluasi ini metrik yang digunakan adalah Mean Squared Error (MSE), dimana dia akan mengukur seberapa dekat garis pas dengan titik pada data dan mengukur kinerja pada model. Dan ini menunjukkan bahwa KNN merupakan model terbaik dalam memprediksi harga stock Tesla kedepannya.
 
-![mse_rumus](https://user-images.githubusercontent.com/73319544/191768488-1d350af9-cb15-4fe1-8cd5-7c8ded16aaf9.png)
 
-Gambar 5. Rumus MSE
+$$ MSE = {1 \over N} \sum_{i=1}^N (Yi - \hat{Y}i)^2  $$
+
+
+Tabel 5. Rumus MSE
 
 Keterangan :
 - n = Jumlah titik data
@@ -165,12 +169,18 @@ Keterangan :
 
 berikut merupakan Visualisai dari hasil akurasi model :
 
-![mse](https://user-images.githubusercontent.com/105061172/193508315-d0d6e65f-0bed-474f-9823-4db40229a8ec.jpeg)
+||train_mse|test_mse|
+|-----------|------------|------------|
+|SVR|4.614288|4.49862|
+|KNN|2.158327|3.0382|
+|GradientBoosting|1.355092|4.037711|
 
 
-Gambar 6. Hasil MSE dari model
 
-Pada Gambar 6, Kita bisa lihat hasil dari MSE model, dimana semakin kecil MSE yang diperoleh oleh model maka akan semakin optimal algortima tersebut.
+
+Tabel 6. Hasil MSE dari model
+
+Pada Tabel 6, Kita bisa lihat hasil dari MSE model, dimana semakin kecil MSE yang diperoleh oleh model maka akan semakin optimal algortima tersebut.
 
 ![mse_plot](https://user-images.githubusercontent.com/105061172/193509304-9027691a-9b67-441c-8eaa-0bed1a5fb6b4.jpeg)
 
@@ -179,13 +189,15 @@ Gambar 7. Plot Visualisasi MSE pada model
 
 Pada Gambar 7, kita bisa melihat hasil plot dari model terhadap beberapa algortma yang digunakan, ada 2 algoritma yang sangat cocok untuk gunakan diantaranya ada KNN dan Gradient Boosting.
 
-![mse_accuracy](https://user-images.githubusercontent.com/105061172/193509258-cca133cf-6e96-40cb-b18a-95968d848f4d.jpeg)
+||Accuracy (%)|
+|-----------|------------|
+|SVR|99.949613|
+|KNN|99.965970|
+|GradientBoosting|99.954775|
 
 
 
-
-
-Gambar 8. Hasil akurasi MSE model
+Tabel 8. Hasil akurasi MSE model
 
 Pada Gambar 8, Kita bisa melihat akurasi dari setiap algortima yagn digunakan dan kita bisa simpulkan bahwa KNN atau K-Nearest Neighbors merupakan algortma paling optimal untuk model. 
 
@@ -194,7 +206,21 @@ Pada proyek ini semua model berjalan dengan sangat baik dan maksimal dan hanya t
 ### Forecasting
 pada tahap ini saya akan mencoba memprediksi menggunakan algortma yang kita pili diatas yaitu KNN dalam kurun waktu 30 hari kedepan 
 
-![Prediksi](https://user-images.githubusercontent.com/105061172/193508929-52ddc585-6831-41a5-948d-2db83f5dc051.jpeg)
+||Adj Close|Forecast|
+|-----------|------------|------------|
+|1687|246.169998|NaN|
+|1688|258.000000|NaN|
+|1689|255.729996|NaN|
+|1690|262.049988|NaN|
+|1691|261.500000|NaN|
+|0|NaN|280.830007|
+|1|NaN|280.830007|
+|2|NaN|280.830007|
+|3|NaN|280.830007|
+|4|NaN|280.830007|
+|5|NaN|280.830007|
+
+
 
  Bisa kita lihat prediksi harga yang akan datang dalam kurun waktu 30 hari kedepan yang sudah diprediksi menggunakan KNN yang telah kita pilih sebagai algortima yang paling optimal.
 
