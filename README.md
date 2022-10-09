@@ -224,3 +224,7 @@ pada tahap ini saya akan mencoba memprediksi menggunakan algortma yang kita pili
 
  Bisa kita lihat prediksi harga yang akan datang dalam kurun waktu 30 hari kedepan yang sudah diprediksi menggunakan KNN yang telah kita pilih sebagai algortima yang paling optimal.
 
+## Referensi :
+* Sidhu, R. (sep 30, 2019).KNN Classification Algorithm in Python.Medium, from https://medium.com/x8-the-ai-community/knn-classification-algorithm-in-python-65e413e1cea0
+* Spiliotis E. Decision Trees for Time-Series Forecasting (january 2022), from https://www.researchgate.net/publication/359865759_Decision_Trees_for_Time-Series_Forecasting
+*  Gudekar A. Stock Prediction Application using Machine Learning(April 2022) from https://www.researchgate.net/publication/360300426_Stock_Prediction_Application_using_Machine_Learning
